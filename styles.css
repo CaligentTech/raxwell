@@ -31,13 +31,14 @@ img {
 	max-width: 100%;
 }
 .site-header {
+	width: 100%;
 	height: 88px;
 	padding: 0 5.2%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background: #fff;
-	position: relative;
+	position: fixed;
 	z-index: 5;
 }
 .brand img {
@@ -90,9 +91,7 @@ img {
 	font-size: 23px;
 }
 .hero {
-	min-height: 560px;
-	height: calc(100vh - 70px);
-	max-height: 680px;
+	min-height: 100vh;
 	position: relative;
 	background-image: url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2200&q=90");
 	background-size: cover;
@@ -306,10 +305,10 @@ h2 {
 	margin-bottom: -50px;
 	object-fit: cover;
 }
-.about-img img{
+.about-img img {
 	width: 100%;
-    height: 100%;
-    object-fit: cover;
+	height: 100%;
+	object-fit: cover;
 }
 .hero-caption {
 	display: flex;
@@ -399,8 +398,8 @@ h2 {
 }
 .product-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 0.68fr;
-	gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
 }
 .product-card {
 	height: clamp(210px, 31vw, 380px);
@@ -656,7 +655,7 @@ h2 {
 	color: var(--ink);
 }
 .prod-hero {
-	padding: 60px;
+	padding: 120px 60px 30px;
 	border-top: 1px solid var(--line);
 	background: rgba(105, 104, 108, 0.1);
 }
@@ -682,10 +681,10 @@ h2 {
 	justify-content: center;
 	overflow: hidden;
 }
-.prod-img img{
+.prod-img img {
 	width: 100%;
-    height: 100%;
-    object-fit: cover;
+	height: 100%;
+	object-fit: cover;
 }
 .prod-des {
 	padding: 60px;
@@ -863,19 +862,14 @@ h2 {
 	font-weight: 400;
 }
 .raxwell-vendor {
-	--rx-ink: #2d2828;
-	--rx-muted: #6d6666;
-	--rx-border: #d7d3d2;
-	--rx-red: #e13c32;
-	--rx-blue: #315da8;
-
+	padding-top: 90px;
 	width: 100%;
 	background: #fff;
-	color: var(--rx-ink);
+	color: var(--ink);
 	font-family: "Manrope", "DM Sans", Arial, sans-serif;
 }
 .raxwell-vendor__heading {
-	padding: 128px 3.25% 48px;
+	padding: 60px;
 	border-bottom: 1px solid #f1efee;
 }
 .raxwell-eyebrow {
@@ -922,7 +916,7 @@ h2 {
 	line-height: 1.5;
 }
 .raxwell-field label span {
-	color: var(--rx-red);
+	color: var(--red);
 }
 .raxwell-field input,
 .raxwell-phone select {
@@ -934,7 +928,7 @@ h2 {
 	border-radius: 0;
 	outline: none;
 	background: #fff;
-	color: var(--rx-ink);
+	color: var(--ink);
 	font: inherit;
 	font-size: 14px;
 	transition:
@@ -943,7 +937,7 @@ h2 {
 }
 .raxwell-field input:focus,
 .raxwell-phone select:focus {
-	border-color: var(--rx-blue);
+	border-color: var(--blue);
 	box-shadow: 0 0 0 2px rgb(49 93 168 / 10%);
 }
 .raxwell-field input:hover,
@@ -971,7 +965,7 @@ h2 {
 	padding: 12px 24px;
 	border: 0;
 	border-radius: 50px;
-	background: var(--rx-ink);
+	background: var(--red);
 	color: #fff;
 	font-family: inherit;
 	font-size: 12px;
@@ -983,13 +977,13 @@ h2 {
 		transform 0.2s;
 }
 .raxwell-submit:hover {
-	background: var(--rx-red);
+	background: var(--blue);
 }
 .raxwell-submit:active {
 	transform: scale(0.99);
 }
 .raxwell-submit:focus-visible {
-	outline: 2px solid var(--rx-blue);
+	outline: 2px solid var(--red);
 	outline-offset: 4px;
 }
 .quote-page {
@@ -1119,6 +1113,156 @@ select:focus {
 	object-position: center;
 }
 
+.raxwell-products {
+	width: 100%;
+}
+
+.product-category {
+	margin: 0 0 38px;
+	padding: 90px 60px 60px;
+}
+
+.product-category h2 {
+	margin: 0 0 30px;
+	color: #292525;
+	font-size: 42px;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+#hand-protection-products,
+#head-body-safety-products,
+#facility-emergency-equipment {
+	background: var(--line);
+}
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px 32px;
+}
+
+.card {
+	min-width: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	transition:
+		transform 0.22s ease,
+		box-shadow 0.22s ease;
+	border: 2px solid var(--red);
+}
+
+.card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 20px rgb(40 30 30 / 9%);
+}
+
+.product-image {
+	height: 205px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px;
+	background: #fff;
+}
+
+.product-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.card h3 {
+	min-height: 56px;
+	margin: 0;
+	margin-top: auto;
+	padding: 9px 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: var(--red);
+	color: var(--line);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+	.raxwell-products {
+		padding: 0 0;
+	}
+
+	.card-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 18px;
+	}
+
+	.product-image {
+		height: 200px;
+	}
+
+	.product-category h2 {
+		font-size: 22px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+	.product-category {
+		padding: 80px 30px 30px;
+	}
+
+	.product-category h2 {
+		font-size: 22px;
+	}
+
+	.card-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 14px 12px;
+	}
+
+	.product-image {
+		height: clamp(125px, 36vw, 175px);
+		padding: 8px;
+	}
+
+	.card h3 {
+		min-height: 53px;
+		padding: 8px 5px;
+		font-size: 11px;
+	}
+}
+
+@media (max-width: 460px) {
+	.card-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Very small phones */
+@media (max-width: 350px) {
+	.product-image {
+		height: 210px;
+	}
+
+	.card h3 {
+		font-size: 13px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.product-card {
+		transition: none;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.raxwell-field input,
 	.raxwell-phone select,
@@ -1176,6 +1320,7 @@ select:focus {
 @media (max-width: 1000px) {
 	.prod-hero h2 {
 		width: auto;
+		font-size: 40px;
 	}
 	.mobile-img {
 		display: block;
@@ -1220,6 +1365,9 @@ select:focus {
 	.raxwell-submit {
 		margin-top: 42px;
 	}
+	.product-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 @media (max-width: 760px) {
 	.site-header {
@@ -1259,11 +1407,8 @@ select:focus {
 		display: block;
 	}
 	.hero {
-		height: 490px;
-		min-height: 0;
 		background-position: 58% center;
 		padding: 0 6%;
-		height: calc(100vh - 70px);
 	}
 	.hero-content {
 		margin-top: 0;
@@ -1371,7 +1516,7 @@ select:focus {
 	.product-grid {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 30px;
 	}
 	.product-card {
 		height: 245px;
@@ -1538,7 +1683,7 @@ select:focus {
 }
 @media (max-width: 560px) {
 	.raxwell-vendor__heading {
-		padding: 64px 6% 30px;
+		padding: 30px;
 	}
 
 	.raxwell-eyebrow {
@@ -1594,8 +1739,15 @@ select:focus {
 		flex-wrap: wrap;
 		gap: 24px;
 	}
-	.hero-caption h2{
+	.hero-caption h2 {
 		font-size: 42px;
+	}
+	.prod-hero {
+		padding: 40px;
+		padding-top: 90px;
+	}
+	.prod-hero h2 {
+		font-size: 32px;
 	}
 }
 @media (max-width: 390px) {
