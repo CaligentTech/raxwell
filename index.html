@@ -14,15 +14,15 @@
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="styles.css?v=3.8" />
 	</head>
 	<body>
 		<header class="site-header">
-			<a class="brand" href="/" aria-label="Raxwell home"
+			<a class="brand" href="index.html" aria-label="Raxwell home"
 				><img src="assets/raxwell-logo.png" alt="Raxwell logo"
 			/></a>
 			<nav class="desktop-nav" aria-label="Main navigation">
-				<a href="/">Home</a
+				<a href="index.html">Home</a
 				><a href="about-us.html">About us</a
 				><a href="products.html">Products</a
 				><a href="get-a-quote.html">Contact</a>
@@ -43,19 +43,11 @@
 			<section class="hero" id="home">
 				<div class="hero-shade"></div>
 				<div class="hero-content">
-					<p class="eyebrow light">Safety you can depend on</p>
-					<h1>Trusted Suppliers of Safety<br />Equipment</h1>
-					<p class="hero-subtitle">
-						Experienced &amp; reliable suppliers, built around your
-						safety.
-					</p>
+					<h1 class="hero-brand">RAXWELL</h1>
+					<p class="hero-tagline">Safety you can depend on</p>
 					<a class="pill pill-white" href="products.html"
 						>Explore our range <span>↗</span></a
 					>
-				</div>
-				<div class="hero-note">
-					<span class="note-line"></span> PROTECTING PEOPLE. POWERING
-					INDUSTRY.
 				</div>
 			</section>
 
@@ -145,8 +137,8 @@
 				</div>
 				<div class="about-image image-frame">
 					<img
-						src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85"
-						alt="Modern commercial building viewed from below"
+						src="assets/homeimg.png"
+						alt="Industrial and construction safety team"
 					/>
 				</div>
 			</section>
@@ -166,7 +158,7 @@
 						class="product-card"
 						href="products.html#protective-wear-products"
 						><img
-							src="/assets/protective-wear.png"
+							src="assets/protective-wear.png"
 							alt="Protective wear Products"
 						/><span class="product-label"
 							>Protective wear Products <b>↗</b></span
@@ -176,7 +168,7 @@
 						class="product-card"
 						href="products.html#hand-protection-products"
 						><img
-							src="/assets/hand-gloves.png"
+							src="assets/hand-gloves.png"
 							alt="Hand Protection Products"
 						/><span class="product-label"
 							>Hand Protection Products <b>↗</b></span
@@ -186,7 +178,7 @@
 						class="product-card"
 						href="products.html#respiratory-face-products"
 						><img
-							src="/assets/respiratory-face-products.png"
+							src="assets/respiratory-face-products.png"
 							alt="Respiratory & Face Protection"
 						/><span class="product-label"
 							>Respiratory & Face Protection <b>↗</b></span
@@ -196,7 +188,7 @@
 						class="product-card"
 						href="products.html#head-body-safety-products"
 						><img
-							src="/assets/head-body-safety-products.png"
+							src="assets/head-body-safety-products.png"
 							alt="Head & Body Safety Products"
 						/><span class="product-label"
 							>Head & Body Safety Products <b>↗</b></span
@@ -206,7 +198,7 @@
 						class="product-card"
 						href="products.html#traffic-road-site-control"
 						><img
-							src="/assets/traffic-road-site-control.png"
+							src="assets/traffic-road-site-control.png"
 							alt="Traffic, Road Safety & Site Control"
 						/><span class="product-label"
 							>Traffic, Road Safety & Site Control <b>↗</b></span
@@ -216,7 +208,7 @@
 						class="product-card"
 						href="products.html#facility-emergency-equipment"
 						><img
-							src="/assets/facility-emergency-equipment.png"
+							src="assets/facility-emergency-equipment.png"
 							alt="Protective gloves and industrial tools"
 						/><span class="product-label"
 							>Facility, LOTO & Emergency Equipment <b>↗</b></span
@@ -331,36 +323,35 @@
 				</div>
 			</section>
 
-			<section class="vision-mission">
+			<section class="vision-mission" id="why-choose-raxwell">
 				<div class="vm-row vision-row">
 					<div class="vm-copy">
-						<p class="eyebrow">Looking ahead</p>
-						<h2>Vision</h2>
+						<p class="eyebrow">Proven Reliability</p>
+						<h2>Why Choose<br /><span style="color: var(--red)">Raxwell</span></h2>
 						<p>
-							To be a trusted partner in workplace safety and
-							industrial supply, recognized for quality,
-							dependable service, and a commitment to helping
-							people work with confidence.
+							We provide end-to-end industrial safety equipment and PPE
+							engineered for maximum protection in extreme environments.
+							With trusted local availability across Saudi Arabia, we keep
+							your workforce safe and your operations moving without delay.
 						</p>
 					</div>
 					<img
-						src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=85"
-						alt="Saudi city skyline illuminated at night"
+						src="assets/indus.png"
+						alt="Industrial plant machinery and safety"
 					/>
 				</div>
 				<div class="vm-row mission-row">
 					<img
-						src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85"
-						alt="Contemporary office tower architecture"
+						src="assets/eng.png"
+						alt="Engineers inspecting industrial machinery"
 					/>
 					<div class="vm-copy">
-						<p class="eyebrow">What guides us</p>
-						<h2>Mission</h2>
+						<p class="eyebrow">Complete PPE Range</p>
+						<h2>Quality You Can Trust</h2>
 						<p>
-							To supply high-quality safety and industrial
-							products with care, expertise, and
-							consistency—building lasting relationships while
-							helping create safer, more productive workplaces.
+							From certified protective wear to specialized emergency and
+							facility safety gear, every product is rigorously tested to
+							comply with SASO, ISO, and international safety standards.
 						</p>
 					</div>
 				</div>
@@ -370,7 +361,7 @@
 		<footer id="contact">
 			<div class="footer-top">
 				<div class="footer-brand">
-					<img src="assets/raxwell-logo.png" alt="Raxwell" />
+					<img src="assets/logo4.png" alt="Raxwell" />
 					<p>Raxwell Industrial Safety</p>
 					<p>Safety supplies. Trusted partnerships.</p>
 					<p>+966 53 348 5999</p>
@@ -379,8 +370,8 @@
 					<h4>Explore</h4>
 					<a href="about-us.html">About us</a
 					><a href="products.html">Products</a
-					><a href="get-a-quote.html">Contact</a
-					><a href="Rexwell_Brochure Final -7.pdf">View Brochure</a>
+					><a href="get-a-quote.html">Contact</a>
+					<a href="Rexwell_Brochure Final -7.pdf">View Brochure</a>
 				</div>
 				<div class="footer-col">
 					<h4>Products</h4>
@@ -414,5 +405,6 @@
 				><span>Built around safety and reliability.</span>
 			</div>
 		</footer>
+		<script src="script.js"></script>
 	</body>
 </html>
