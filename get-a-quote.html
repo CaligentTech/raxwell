@@ -16,13 +16,14 @@
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="styles.css?v=3.8" />
+		<link rel="stylesheet" href="styles.css?v=8.3" />
 	</head>
 	<body class="contact-page-body">
 		<header class="site-header">
-			<a class="brand" href="index.html" aria-label="Raxwell home"
-				><img src="assets/raxwell-logo.png" alt="Raxwell logo"
-			/></a>
+			<a class="brand" href="index.html" aria-label="Raxwell home">
+				<img src="assets/raxwell-logo.png" alt="Raxwell logo" />
+				<span class="brand-title">RAXWELL</span>
+			</a>
 			<nav class="desktop-nav" aria-label="Main navigation">
 				<a href="index.html">Home</a>
 				<a href="about-us.html">About us</a>
@@ -48,7 +49,7 @@
 					<span class="contact-eyebrow">GET IN TOUCH</span>
 					<h1>Let’s Discuss Your Safety Needs</h1>
 					<p class="contact-hero-desc">
-						Connect with our industrial safety experts in Saudi Arabia. From tailored product advice to bulk enterprise procurement and SASO compliance, we are here to support your workforce.
+						Connect with our industrial safety experts in Saudi Arabia. From tailored product advice to bulk enterprise procurement, we are here to support your workforce.
 					</p>
 				</div>
 			</section>
@@ -73,7 +74,6 @@
 									<div class="contact-card-text">
 										<span class="contact-card-label">Direct Hotline / WhatsApp</span>
 										<strong class="contact-card-val">+966 53 348 5999</strong>
-										<span class="contact-card-note">Sun – Thu, 8:00 AM – 6:00 PM (AST)</span>
 									</div>
 								</div>
 							</a>
@@ -87,7 +87,6 @@
 									<div class="contact-card-text">
 										<span class="contact-card-label">Email Inquiries & RFQs</span>
 										<strong class="contact-card-val">info@raxwell.com</strong>
-										<span class="contact-card-note">Fast response for quotes & inquiries</span>
 									</div>
 								</div>
 							</a>
@@ -98,31 +97,9 @@
 									<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
 								</div>
 								<div class="contact-card-text">
-									<span class="contact-card-label">Headquarters & Supply Network</span>
-									<strong class="contact-card-val">Kingdom of Saudi Arabia</strong>
-									<span class="contact-card-note">Serving Riyadh, Jubail, Dammam, Jeddah & Nationwide Projects</span>
+									<strong class="contact-card-val">Saudi Arabia</strong>
 								</div>
 							</div>
-
-							<!-- Card 4: Response -->
-							<div class="contact-info-card">
-								<div class="contact-icon-box">
-									<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-								</div>
-								<div class="contact-card-text">
-									<span class="contact-card-label">Quote Turnaround</span>
-									<strong class="contact-card-val">Within 24 Business Hours</strong>
-									<span class="contact-card-note">Formal quotation with technical specs & test reports</span>
-								</div>
-							</div>
-						</div>
-
-						<!-- Compliance & Trust Badges -->
-						<div class="contact-trust-tags">
-							<span class="contact-tag">✓ SASO Compliant</span>
-							<span class="contact-tag">✓ ISO 9001:2015</span>
-							<span class="contact-tag">✓ CE & ANSI Standards</span>
-							<span class="contact-tag">✓ GOSI Workplace Standards</span>
 						</div>
 					</div>
 
@@ -134,7 +111,11 @@
 								<p>Fill out the details below and an industrial safety specialist will reach out promptly.</p>
 							</div>
 
-							<form class="modern-contact-form" action="#" method="POST">
+							<form class="modern-contact-form" id="quote-form" action="https://formspree.io/f/mbggpjvl" method="POST">
+								<!-- Formspree Subject & Anti-spam Honeypot -->
+								<input type="hidden" name="_subject" value="New Quote Request - Raxwell Website" />
+								<input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" />
+
 								<div class="form-grid">
 									<!-- Name Fields -->
 									<div class="form-group">
@@ -156,16 +137,7 @@
 									<!-- Phone Field -->
 									<div class="form-group">
 										<label for="contact-phone">Phone Number <span class="req">*</span></label>
-										<div class="phone-input-wrap">
-											<select id="country-code" name="countryCode" aria-label="Country Code">
-												<option value="+966" selected>🇸🇦 +966</option>
-												<option value="+971">🇦🇪 +971</option>
-												<option value="+91">🇮🇳 +91</option>
-												<option value="+1">🇺🇸 +1</option>
-												<option value="+44">🇬🇧 +44</option>
-											</select>
-											<input id="contact-phone" name="phone" type="tel" placeholder="53 348 5999" required />
-										</div>
+										<input id="contact-phone" name="phone" type="tel" placeholder="e.g. +966 53 348 5999" required />
 									</div>
 
 									<!-- Company Name -->
@@ -204,12 +176,37 @@
 									<button class="contact-submit-btn" type="submit">
 										Submit Request <span>↗</span>
 									</button>
+									<div class="form-status-error" id="form-error" style="display: none;" role="alert">
+										<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+										<span class="error-text">There was an issue submitting your request. Please try again.</span>
+									</div>
 									<p class="form-privacy-note">
 										<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
 										Your information is protected and used solely to fulfill your inquiry.
 									</p>
 								</div>
 							</form>
+
+							<!-- Custom Success Message Panel -->
+							<div class="form-status-success" id="form-success" style="display: none;">
+								<div class="success-icon-wrap">
+									<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+										<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+										<polyline points="22 4 12 14.01 9 11.01"></polyline>
+									</svg>
+								</div>
+								<h3>Thank You!</h3>
+								<p class="success-title">Your quote request has been received.</p>
+								<p class="success-desc">
+									An industrial safety specialist will review your specifications and contact you shortly (typically within 24 hours) with pricing and delivery lead times.
+								</p>
+								<div class="success-details">
+									<p>Need immediate support? Call our team directly at <a href="tel:+966533485999">+966 53 348 5999</a> or email <a href="mailto:info@raxwell.com">info@raxwell.com</a>.</p>
+								</div>
+								<button type="button" class="btn-submit-another" id="btn-reset-form">
+									Submit Another Request <span>+</span>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -220,8 +217,9 @@
 			<div class="footer-top">
 				<div class="footer-brand">
 					<img src="assets/logo4.png" alt="Raxwell" />
-					<p>Raxwell Industrial Safety</p>
-					<p>Safety supplies. Trusted partnerships.</p>
+					<span class="footer-brand-title">RAXWELL</span>
+					<p>Industrial PPE &amp; Safety</p>
+					<p>Safety Today, Secure Tomorrow.</p>
 					<p>+966 53 348 5999</p>
 				</div>
 				<div class="footer-col">
@@ -253,7 +251,7 @@
 				<div class="footer-contact">
 					<h4>Let’s work together</h4>
 					<p>Talk to our team about your safety equipment needs.</p>
-					<a class="pill pill-red" href="mailto:info@raxwell.com"
+					<a class="pill pill-red" href="get-a-quote.html"
 						>Get in touch <span>↗</span></a
 					>
 				</div>
@@ -263,6 +261,6 @@
 				><span>Built around safety and reliability.</span>
 			</div>
 		</footer>
-		<script src="script.js"></script>
+		<script src="script.js?v=2.1"></script>
 	</body>
 </html>
