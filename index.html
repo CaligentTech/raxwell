@@ -15,6 +15,24 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="styles.css?v=9.1" />
+
+		<!-- High-Priority Preload for Hero Images -->
+		<link
+			rel="preload"
+			as="image"
+			href="assets/hero-sunset.webp?v=8.3"
+			media="(min-width: 769px)"
+			type="image/webp"
+			fetchpriority="high"
+		/>
+		<link
+			rel="preload"
+			as="image"
+			href="assets/hero-mobile.webp?v=8.6"
+			media="(max-width: 768px)"
+			type="image/webp"
+			fetchpriority="high"
+		/>
 	</head>
 	<body>
 		<header class="site-header">
