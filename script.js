@@ -75,7 +75,7 @@ if (quoteForm) {
 				showError(message);
 			}
 		} catch (networkErr) {
-			showError('Network error. Please check your internet connection or email info@raxwell.com directly.');
+			showError('Network error. Please check your internet connection or email info@raxwells.com directly.');
 		} finally {
 			if (submitBtn) {
 				submitBtn.disabled = false;
@@ -127,4 +127,29 @@ if (quoteForm) {
 		// Ignore URL search param errors
 	}
 }
+
+// Video showcase play overlay handler
+const showcasePlayer = document.getElementById('video-showcase-player');
+const showcaseVideo = document.getElementById('showcase-video-elem');
+const playTrigger = document.getElementById('video-play-trigger');
+
+if (showcasePlayer && showcaseVideo && playTrigger) {
+	playTrigger.addEventListener('click', () => {
+		showcaseVideo.play();
+	});
+
+	showcaseVideo.addEventListener('play', () => {
+		showcasePlayer.classList.add('is-playing');
+	});
+
+	showcaseVideo.addEventListener('pause', () => {
+		if (showcaseVideo.seeking) return;
+		showcasePlayer.classList.remove('is-playing');
+	});
+
+	showcaseVideo.addEventListener('ended', () => {
+		showcasePlayer.classList.remove('is-playing');
+	});
+}
+
 
