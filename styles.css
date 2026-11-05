@@ -30,6 +30,17 @@ img {
 	display: block;
 	max-width: 100%;
 }
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
 .site-header {
 	width: 100%;
 	height: 88px;
@@ -860,6 +871,7 @@ h2 {
 	border-top: 1px solid var(--line);
 	background: rgba(105, 104, 108, 0.1);
 }
+.prod-hero h1,
 .prod-hero h2 {
 	width: 800px;
 	font-weight: 500;
@@ -1650,6 +1662,7 @@ select:focus {
 	}
 }
 @media (max-width: 1000px) {
+	.prod-hero h1,
 	.prod-hero h2 {
 		width: auto;
 		font-size: 40px;
@@ -2289,6 +2302,7 @@ select:focus {
 	.prod-hero {
 		padding: 85px 5% 24px;
 	}
+	.prod-hero h1,
 	.prod-hero h2 {
 		font-size: 26px;
 	}

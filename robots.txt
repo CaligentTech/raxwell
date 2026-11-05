@@ -1,0 +1,6 @@
+# robots.txt for https://www.raxwells.com
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.raxwells.com/sitemap.xml
