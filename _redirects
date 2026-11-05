@@ -1,0 +1,5 @@
+# 301 Redirects: .html to canonical extensionless URLs
+/index.html          /              301
+/about-us.html       /about-us      301
+/products.html       /products      301
+/get-a-quote.html    /get-a-quote   301

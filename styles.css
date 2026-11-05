@@ -125,7 +125,7 @@ img {
 .hero {
 	min-height: 100vh;
 	position: relative;
-	background-image: url("assets/hero-sunset.webp?v=8.3");
+	background-image: url("assets/hero-sunset.webp");
 	background-size: cover;
 	background-position: center center;
 	display: flex;
@@ -301,7 +301,8 @@ h2 {
 	display: block;
 }
 
-.trust-pillar-item h3 {
+.trust-pillar-item h3,
+.trust-pillar-item .trust-pillar-title {
 	font-family: var(--font);
 	font-size: 15px;
 	font-weight: 800;
@@ -1806,7 +1807,8 @@ select:focus {
 	.trust-pillar-item {
 		gap: 14px;
 	}
-	.trust-pillar-item h3 {
+	.trust-pillar-item h3,
+	.trust-pillar-item .trust-pillar-title {
 		font-size: 13px;
 	}
 	.certifications {
@@ -2336,7 +2338,8 @@ select:focus {
 		width: 64px;
 		height: 64px;
 	}
-	.trust-pillar-item h3 {
+	.trust-pillar-item h3,
+	.trust-pillar-item .trust-pillar-title {
 		font-size: 11px;
 	}
 	.stats div {
@@ -2456,7 +2459,7 @@ select:focus {
 /* Mobile Hero (Sunset Over the Industrial Refinery) */
 @media (max-width: 768px) {
 	.hero {
-		background-image: url("assets/hero-mobile.webp?v=8.6");
+		background-image: url("assets/hero-mobile.webp");
 		background-position: right bottom;
 		background-size: cover;
 		min-height: 100svh;
